@@ -27,12 +27,22 @@ console.log(result4); // true
 
 *******************************************************************************/
 
-let exactly = function() {
-
+let exactly = function(arr, num, cb) {
+    let counter = 0;
+    for (let i = 0; i < arr.length; i++) {
+        let ele = arr[i];
+        if (cb(ele)) {
+            counter++;
+        }
+    }
+    return counter === num;
 };
 
 
-
+let result1 = exactly([18, 5, 32, 7, 100], 3, function (n) {
+    return n % 2 === 0;
+});
+console.log(result1); // true
 
 
 
