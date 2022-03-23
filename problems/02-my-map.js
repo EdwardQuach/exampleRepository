@@ -16,12 +16,19 @@ let result2 = myMap(['run', 'Forrest'], function (el) {
 console.log(result2);   // [ 'RUN!', 'FORREST!' ]
 *******************************************************************************/
 
-let myMap = function() {
-
+let myMap = function(arr, cb) {
+    let newArr = [];
+    for (let i = 0; i < arr.length; i++) {
+        let num = arr[i];
+        let res = cb(num, i, arr);
+        newArr.push(res);
+    }
+    return newArr;
 };
 
 
-
+let result = myMap([100, 25, 81, 64], Math.sqrt);
+console.log(result);
 
 
 
