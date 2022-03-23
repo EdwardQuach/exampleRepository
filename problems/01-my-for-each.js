@@ -31,7 +31,7 @@ let myForEach = function(arr, cb) {
 let test = [];
 myForEach(['laika', 'belka'], function (el) {
     test.push(el.toUpperCase());
-});
+})
 console.log(test);
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 module.exports = myForEach;
