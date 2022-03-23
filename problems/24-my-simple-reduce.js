@@ -42,9 +42,7 @@ let mySimpleReduce = function(arr, cb) {
     }
     return accum;
 };
-// and call the callback for each of the remaining elements in the array,
-// passing in the current accumulator and current element into the callback. Upon calling the callback,
-// the accumulator should be set to the result of the callback. 
+
 let result1 = mySimpleReduce([5, 3, 2, 4], function(sum, el) {
     return sum + el;
 });
