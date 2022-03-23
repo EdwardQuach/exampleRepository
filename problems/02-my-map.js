@@ -16,10 +16,6 @@ let result2 = myMap(['run', 'Forrest'], function (el) {
 console.log(result2);   // [ 'RUN!', 'FORREST!' ]
 *******************************************************************************/
 
-<<<<<<< HEAD
-let myMap = function(arr) {
-
-=======
 let myMap = function(arr, cb) {
     let newArr = [];
     for (let i = 0; i < arr.length; i++) {
@@ -28,7 +24,6 @@ let myMap = function(arr, cb) {
         newArr.push(res);
     }
     return newArr;
->>>>>>> 0def8baa8feb3c74e7005e2449ffca2531fe70c4
 };
 
 
