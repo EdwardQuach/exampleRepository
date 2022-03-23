@@ -28,10 +28,27 @@ console.log(andSelect(['ants', 'APPLES', 'ART', 'BACON', 'arm'], isUpperCase,  s
 
 *******************************************************************************/
 
-let andSelect = function() {
-
+let andSelect = function(arr, cb1, cb2) {
+    let newArr = [];
+    for (let i = 0; i < arr.length; i++){
+        let ele = arr[i];
+        if (cb1(ele) && cb2(ele)){
+            newArr.push(ele);
+        }
+    }
+    return newArr;
 };
 
+let isEven = function (n) {
+    return n % 2 === 0;
+};
+
+let isPositive = function (n) {
+    return n > 0;
+};
+
+console.log(andSelect([-3, 8, 7, 11, 6, 12, -4], isEven, isPositive));
+// [ 8, 6, 12 ]
 
 
 
